@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 Dir.chdir("uploadmyip") unless Dir.getwd =="/root/uploadmyip"
-command = system('ifconfig | grep inet > add')
-File.open('add', 'r+') do |f|
+command = system('ifconfig | grep inet > ip')
+File.open('ip', 'r+') do |f|
     #puts f.read
     a = []
     a<<f.read.split()
