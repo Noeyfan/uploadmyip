@@ -8,5 +8,5 @@ File.open('add', 'r+') do |f|
     f.close
 end
 
-command = system('git add . ; git commit -m "new ip";
+command = system('git add .; git commit -m "new ip";
 		git push')
