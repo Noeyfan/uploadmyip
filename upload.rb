@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-Dir.chdir("uploadmyip")
+Dir.chdir("uploadmyip") unless Dir.getwd =="/root/uploadmyip"
 command = system('ifconfig | grep inet > add')
 File.open('add', 'r+') do |f|
     #puts f.read
@@ -9,5 +9,5 @@ File.open('add', 'r+') do |f|
     f.close
 end
 
-command = system('git add .; git commit -m "new ip";
+command = system('git add .; git commit -m "#{Time.now}";
 		git push')
