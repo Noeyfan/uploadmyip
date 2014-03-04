@@ -1,4 +1,4 @@
-#! usr/bin/ruby 
+#! usr/bin/ruby  -w
 command = system('ifconfig | grep inet > add')
 File.open('add', 'r+') do |f|
     #puts f.read
