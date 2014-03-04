@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+Dir.chdir("uploadmyip")
 command = system('ifconfig | grep inet > add')
 File.open('add', 'r+') do |f|
     #puts f.read
